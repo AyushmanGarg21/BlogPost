@@ -102,8 +102,8 @@ app.get("/user/contact",(req, res) => {
   res.render("contact",{contactContent:contactContent,temperature,weatherDescription,});
 });
 
-app.get("/compose",(req, res) => {
-    res.render("compose");
+app.get("/user/compose",(req, res) => {
+    res.render("compose",{temperature,weatherDescription,});
 });
 
 app.get("/post/:id",(req, res) => {
@@ -116,7 +116,7 @@ app.get("/post/:id",(req, res) => {
     });
 });
 
-app.post("/compose",(req, res) => {
+app.post("/user/compose",(req, res) => {
   const post = {title:req.body.title,
     content:req.body.postbody};
   composeposts.push(post);

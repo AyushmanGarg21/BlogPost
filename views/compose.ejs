@@ -1,6 +1,6 @@
 <%- include('partials/header') -%>
-<h1>Compose</h1>
-<form action="/compose" method="post">
+<h1>POST</h1>
+<form action="/user/compose" method="post">
     <div class="mb-3">
         <label for="Title" class="form-label">Title</label>
         <input type="text" class="form-control" name="title" id="Title">
@@ -12,7 +12,5 @@
     <button class="btn btn-primary" type="submit" name="button" value="">Publish</button>
 </form>
 </div>
-<div class="footer-padding"></div>
-</div>
-</body>
-</html>
+
+<%- include('partials/footer') -%>
